@@ -1,0 +1,65 @@
+// theme-colors
+$primary: #2060df;
+$secondary: #2b2e32;
+
+//grays
+$black: #000;
+$navy: #464f68;
+$dark: #212128 !default;
+$white: #fff;
+$dark-gray: #808191;
+$light-gray: #bdbcbc;
+$gray-dc: #dcdcdc;
+
+//colors
+$red: #f5446d;
+$blue: #003196;
+$green: #00c51f;
+$bronze: #c3783f;
+$yellow: #fae100;
+$orange: #ff8711;
+$middle-blue: #888fb2;
+$light-blue: #f4f5fa;
+$sky-blue: #44a0ff;
+$blue-e2: #e2e5f2;
+$blue-cf: #cfd3e5;
+
+$transparent: rgba(0, 0, 0, 0);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "black": $black,
+  "navy": $navy,
+  "dark": $dark,
+  "white": $white,
+  "dark-gray": $dark-gray,
+  "light-gray": $light-gray,
+  "gray-dc": $gray-dc,
+  "red": $red,
+  "blue": $blue,
+  "green": $green,
+  "bronze": $bronze,
+  "yellow": $yellow,
+  "orange": $orange,
+  "middle-blue": $middle-blue,
+  "light-blue": $light-blue,
+  "sky-blue": $sky-blue,
+  "blue-e2": $blue-e2,
+  "blue-cf": $blue-cf,
+  "transparent": $transparent,
+) !default;
+
+// breakpoint {
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 640px,
+  lg: 992px,
+  xl: 1300px,
+  xxl: 1440px,
+);
+
+$input-btn-focus-box-shadow: none;
+$input-btn-focus-width: 0;
+$btn-focus-box-shadow: none;

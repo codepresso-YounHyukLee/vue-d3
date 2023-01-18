@@ -1,0 +1,440 @@
+@import "./variable.scss";
+@import "./font.scss";
+@import "./images.scss";
+@import "./icons.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+//@import "../styles/css//fontello-embedded.css";
+#app,
+html,
+body {
+  overflow-x: hidden;
+  font-family: "NanumSquare", sans-serif;
+}
+
+.btn,
+button,
+.input,
+input {
+  &:focus,
+  &.focus,
+  &:hover,
+  &.hover,
+  &:active,
+  &.active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.pb-38 {
+  padding-bottom: 39.25%;
+  width: 100%;
+  height: 0;
+}
+.pb-56 {
+  padding-bottom: 56.2%;
+  width: 100%;
+  height: 0;
+}
+.pb-57 {
+  padding-bottom: 56.4%;
+  width: 100%;
+  height: 0;
+}
+.pb-50 {
+  padding-bottom: 50%;
+  width: 100%;
+  height: 0;
+}
+.mt-d15rem {
+  margin-top: 0.15rem;
+}
+.min-h50 {
+  min-height: 50rem;
+}
+.min-h45rem {
+  @media all and (max-width: 1269px) {
+    min-height: 36rem;
+  }
+  @media all and (min-width: 1270px) {
+    min-height: 45rem;
+  }
+}
+.border-3-primary {
+  border: 3px solid $primary;
+}
+.border-4-primary {
+  border: 4px solid $primary;
+}
+.border-8-primary {
+  border: 8px solid $primary;
+}
+
+.rounded-10 {
+  border-radius: 10px;
+}
+.rounded-20 {
+  border-radius: 20px;
+}
+.rounded-10rem {
+  border-radius: 10rem;
+}
+.btn.link {
+  text-decoration: none;
+}
+.border-primary-2 {
+  border: 2px solid $primary;
+}
+.min-w100px {
+  min-width: 100px;
+}
+.min-w180px {
+  min-width: 180px;
+}
+
+.btn-primary {
+  &.disabled {
+    background-color: $blue-e2 !important;
+    border-color: $blue-e2 !important;
+    color: $black;
+  }
+}
+// navbar
+ul.navbar-nav {
+  li.nav-item {
+    border-radius: 3rem;
+
+    &.active {
+      background-color: white;
+      a.nav-link {
+        span {
+          color: $primary !important;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+// tabs
+.nav-tabs {
+  li {
+    a.nav-link {
+      color: $light-gray;
+      &:hover {
+        border-top: 1px solid transparent;
+        border-right: none;
+        border-left: none;
+      }
+    }
+    a[aria-selected="true"] {
+      border-bottom: 2px solid $primary !important;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      &:hover {
+        border-top: none;
+      }
+    }
+  }
+}
+
+// checkbox
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  .custom-control-label {
+    &::before {
+      top: 0.4rem;
+      transform: scale(1.2, 1.2);
+    }
+    &::after {
+      top: 0.4rem;
+      transform: scale(1.2, 1.2);
+    }
+  }
+  .custom-control-input {
+    &:checked {
+      ~ .custom-control-label {
+        &::before {
+        }
+        &::after {
+          background: center/contain no-repeat
+            url("../assets/images/check.svg");
+          background-size: 80%;
+        }
+      }
+    }
+  }
+  &.go-top {
+    .custom-control-label {
+      &::before {
+        top: -0.4rem;
+      }
+      &::after {
+        top: -0.4rem;
+      }
+    }
+  }
+}
+
+// radio
+.radio-black {
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background: black;
+  }
+}
+// .custom-radio {
+//   label.custom-control-label {
+//     &:before {
+//       transform: scale(1.2, 1.2);
+//     }
+//     &::after {
+//       transform: scale(1.2, 1.2);
+//     }
+//   }
+//   // checked
+//   .custom-control-input {
+//     &:checked {
+//       ~ .custom-control-label {
+//         &:before {
+//           background-color: $black;
+//           // border: none;
+//         }
+//         &:after {
+//           transform: scale(1.4, 1.4);
+//           // border: none;
+//         }
+//       }
+//     }
+//   }
+//   &.variant-primary {
+//     .custom-control-input {
+//       &:checked {
+//         ~ .custom-control-label {
+//           &:before {
+//             background-color: $primary !important;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// form-file
+.custom-file.b-form-file {
+  .custom-file-input {
+  }
+  label.custom-file-label {
+    border: none;
+    &:focus,
+    &.focus,
+    &:active,
+    &.active,
+    &:hover,
+    &.hover {
+      outline: none;
+      box-shadow: none;
+    }
+    span {
+      font-size: 16px;
+      color: $middle-blue !important;
+    }
+    &:after {
+      padding: 0.5rem 2rem;
+      background-color: $primary;
+      border-radius: 5rem;
+      color: white;
+      font-size: 16px;
+      line-height: 20px;
+      height: 100%;
+    }
+  }
+  &.thumbnail {
+    label.custom-file-label {
+      border: 0;
+      &:after {
+        border-radius: 10px !important;
+        padding: 0.5rem 2.5rem;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// group-checkbox
+.btn-group-toggle {
+  label {
+    &.btn-outline-light,
+    &.btn-light-blue,
+    &.btn-white,
+    &.btn-light-gray,
+    &.btn-secondary {
+      &.active {
+        background-color: $primary !important;
+        color: white !important;
+        border-width: 1px !important;
+        border-style: solid !important;
+        border-color: $primary !important;
+      }
+    }
+  }
+}
+
+// progress-bar
+.progress-page.progress {
+  .progress-bar {
+    border-radius: 10rem;
+    background-color: black;
+  }
+}
+
+.bgm-progress.progress {
+  overflow: visible;
+  .progress-bar {
+    position: relative;
+    overflow: visible;
+    border-radius: 5rem;
+    &::after {
+      position: absolute;
+      right: 0;
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 10rem;
+      background-color: $primary;
+    }
+  }
+}
+
+//carousel
+button {
+  &.carousel-button {
+    box-shadow: none !important;
+    outline: none !important;
+    &.carousel-prev {
+      right: 9px;
+      left: unset;
+      border: 1px solid $primary;
+      width: 48px;
+      height: 48px;
+      background: center/contain no-repeat url("../assets/icons/prev.svg");
+    }
+    &.carousel-next {
+      right: 50px;
+      margin-left: unset !important;
+      border: 1px solid $primary;
+      width: 48px;
+      height: 48px;
+      background: center/contain no-repeat url("../assets/icons/next.svg");
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+//hom-carousel
+.VueCarousel.home-carousel {
+  .VueCarousel-wrapper {
+    overflow: visible;
+  }
+  .VueCarousel-navigation {
+    .VueCarousel-navigation-button {
+      top: -15%;
+      &.VueCarousel-navigation-prev {
+        width: 48px;
+        height: 48px;
+        border: 1px solid $primary;
+        background-color: white !important;
+        left: 43%;
+        background: center/contain no-repeat url("../assets/icons/prev.svg");
+      }
+      &.VueCarousel-navigation-next {
+        width: 48px;
+        height: 48px;
+        border: 1px solid $primary;
+        background-color: white !important;
+        right: 57.1%;
+        background: center/contain no-repeat url("../assets/icons/next.svg");
+      }
+    }
+  }
+}
+
+//pagination
+.b-pagination {
+  .page-link {
+    padding: 0.35rem 0.75rem;
+    margin: 0.1rem;
+    &:hover {
+      background-color: white;
+    }
+  }
+  .page-link[aria-label="go-prev"] {
+    border-radius: 0.25rem;
+  }
+  .page-link[aria-label="go-next"] {
+    border-radius: 0.25rem;
+  }
+  .page-link[aria-checked="false"] {
+    border: none;
+  }
+  .page-link[aria-checked="true"] {
+    color: $primary;
+    background-color: white;
+    border: none;
+  }
+}
+//
+.sticky-wrap {
+  position: relative !important;
+  overflow: auto !important;
+}
+.sticky-video {
+  position: -webkit-sticky;
+  position: sticky !important;
+  top: 40px;
+  align-self: auto !important;
+}
+.position-initial {
+  position: initial !important;
+}
+
+//
+.selection {
+  label {
+    &.focus,
+    &:focus {
+      background-color: unset !important;
+      border: 1px solid transparent;
+      box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
+    }
+  }
+}
+.selection-category {
+  label {
+    &.focus,
+    &:focus {
+      background-color: $light-blue !important;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+@media all and (max-width: 1800px) {
+  .login-container {
+    width: 100%;
+    .col-12 {
+      display: flex;
+      justify-content: center;
+      .header-box {
+        margin-right: 3rem;
+        min-width: 5rem;
+      }
+      .login-box {
+      }
+    }
+  }
+}

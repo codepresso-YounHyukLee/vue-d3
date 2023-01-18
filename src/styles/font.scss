@@ -1,0 +1,172 @@
+@use "sass:math";
+// 나눔스퀘어
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
+// 나눔명조 & 나눔고딕
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Nanum+Myeongjo:wght@400&display=swap");
+
+@font-face {
+  font-family: "Wemakeprice-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Wemakeprice-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@for $var from 2 through 9 {
+  .fw-#{$var}#{"00"} {
+    font-weight: #{$var}#{"00"};
+  }
+}
+
+.btn,
+.text-ns {
+  font-family: "NanumSquare", sans-serif;
+}
+.text-ng {
+  font-family: "Nanum Gothic", sans-serif;
+}
+.text-nm {
+  font-family: "Nanum Myeongjo", serif;
+}
+.text-we-bold {
+  font-family: "Wemakeprice-Bold";
+}
+.text-we {
+  font-family: "Wemakeprice-Regular";
+}
+
+@for $var from 2 through 9 {
+  .fw-#{$var}#{"00"} {
+    font-weight: #{$var}#{"00"} !important;
+  }
+}
+
+$font-size: (
+  10,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  20,
+  21,
+  22,
+  24,
+  25,
+  26,
+  27,
+  28,
+  30,
+  31,
+  32,
+  34,
+  40,
+  45,
+  48,
+  50,
+  54,
+  56,
+  60,
+  61,
+  65,
+  75,
+  80,
+  90,
+  96,
+  100,
+  115
+);
+
+@media print {
+  @each $var in $font-size {
+    .text-pr-#{$var} {
+      font-size: #{$var}rem;
+    }
+  }
+}
+
+@each $var in $font-size {
+  .text-#{$var} {
+    font-size: #{$var}px;
+  }
+  .btn.text-#{$var} {
+    font-size: #{$var}px !important;
+    * {
+      font-size: #{$var}px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @each $var in $font-size {
+    .text-md-#{$var} {
+      font-size: #{$var}px;
+    }
+    .btn.text-md-#{$var} {
+      font-size: #{$var}px !important;
+      * {
+        font-size: #{$var}px !important;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  @each $var in $font-size {
+    .text-lg-#{$var} {
+      font-size: #{$var}px;
+    }
+    .btn.text-lg-#{$var} {
+      font-size: #{$var}px !important;
+      * {
+        font-size: #{$var}px !important;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1270px) {
+  @each $var in $font-size {
+    .text-xl-#{$var} {
+      font-size: #{$var}px;
+    }
+    .btn.text-xl-#{$var} {
+      font-size: #{$var}px !important;
+      * {
+        font-size: #{$var}px !important;
+      }
+    }
+  }
+}
+
+$line-heights: (90, 135, 160, 165, 170, 180, 200, 225);
+
+@each $var in $line-heights {
+  .lh-#{$var} {
+    line-height: #{($var/ 100)};
+  }
+}
+.lh-0 {
+  line-height: 0;
+}
+.word-break {
+  word-break: break-all;
+}
+.break-keep {
+  word-break: keep-all !important;
+}
+.break-initial {
+  word-break: initial !important;
+  word-wrap: break-word;
+}
+.underline {
+  text-decoration: underline !important;
+}
